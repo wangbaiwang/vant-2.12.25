@@ -267,7 +267,7 @@ export default createComponent({
           }}
           onClick={(e) => e.stopPropagation()}
         >
-          {(this.range ? [this.slots('button_left'), this.slots('button_right')] : this.slots('button')) || (
+          {(this.range ? this.slots(i === 0 ? 'button_left' : 'button_right') : this.slots('button')) || (
             <div class={bem('button')} style={this.buttonStyle} />
           )}
         </div>
