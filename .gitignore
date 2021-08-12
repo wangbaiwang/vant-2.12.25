@@ -13,4 +13,3 @@ dist
 /site
 changelog.generated.md
 test/coverage
-vetur
