@@ -272,7 +272,7 @@ export default createComponent({
             return e.stopPropagation();
           }
         }
-      }, [(_this.range ? [_this.slots('button_left'), _this.slots('button_right')] : _this.slots('button')) || h("div", {
+      }, [(_this.range ? _this.slots(i === 0 ? 'button_left' : 'button_right') : _this.slots('button')) || h("div", {
         "class": bem('button'),
         "style": _this.buttonStyle
       })]);

@@ -235,93 +235,21 @@
     "type": "string",
     "description": "默认地址标签文字, 默认值: -"
   },
-  "van-button/type": {
-    "type": "string",
-    "description": "类型，可选值为 `primary` `info` `warning` `danger`, 默认值: `default`"
+  "van-badge/content": {
+    "type": "number | string",
+    "description": "徽标内容, 默认值: -"
   },
-  "van-button/size": {
+  "van-badge/color": {
     "type": "string",
-    "description": "尺寸，可选值为 `large` `small` `mini`, 默认值: `normal`"
+    "description": "徽标背景颜色, 默认值: `#ee0a24`"
   },
-  "van-button/text": {
-    "type": "string",
-    "description": "按钮文字, 默认值: -"
-  },
-  "van-button/color": {
-    "type": "string",
-    "description": "按钮颜色，支持传入 `linear-gradient` 渐变色, 默认值: -"
-  },
-  "van-button/icon": {
-    "type": "string",
-    "description": "左侧[图标名称](#/zh-CN/icon)或图片链接, 默认值: -"
-  },
-  "van-button/icon-prefix": {
-    "type": "string",
-    "description": "图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props), 默认值: `van-icon`"
-  },
-  "van-button/icon-position": {
-    "type": "string",
-    "description": "图标展示位置，可选值为 `right`, 默认值: `left`"
-  },
-  "van-button/tag": {
-    "type": "string",
-    "description": "按钮根节点的 HTML 标签, 默认值: `button`"
-  },
-  "van-button/native-type": {
-    "type": "string",
-    "description": "原生 button 标签的 type 属性, 默认值: -"
-  },
-  "van-button/block": {
+  "van-badge/dot": {
     "type": "boolean",
-    "description": "是否为块级元素, 默认值: `false`"
+    "description": "是否展示为小红点, 默认值: `false`"
   },
-  "van-button/plain": {
-    "type": "boolean",
-    "description": "是否为朴素按钮, 默认值: `false`"
-  },
-  "van-button/square": {
-    "type": "boolean",
-    "description": "是否为方形按钮, 默认值: `false`"
-  },
-  "van-button/round": {
-    "type": "boolean",
-    "description": "是否为圆形按钮, 默认值: `false`"
-  },
-  "van-button/disabled": {
-    "type": "boolean",
-    "description": "是否禁用按钮, 默认值: `false`"
-  },
-  "van-button/hairline": {
-    "type": "boolean",
-    "description": "是否使用 0.5px 边框, 默认值: `false`"
-  },
-  "van-button/loading": {
-    "type": "boolean",
-    "description": "是否显示为加载状态, 默认值: `false`"
-  },
-  "van-button/loading-text": {
-    "type": "string",
-    "description": "加载状态提示文字, 默认值: -"
-  },
-  "van-button/loading-type": {
-    "type": "string",
-    "description": "[加载图标类型](#/zh-CN/loading)，可选值为 `spinner`, 默认值: `circular`"
-  },
-  "van-button/loading-size": {
-    "type": "string",
-    "description": "加载图标大小, 默认值: `20px`"
-  },
-  "van-button/url": {
-    "type": "string",
-    "description": "点击后跳转的链接地址, 默认值: -"
-  },
-  "van-button/to": {
-    "type": "string | object",
-    "description": "点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to), 默认值: -"
-  },
-  "van-button/replace": {
-    "type": "boolean",
-    "description": "是否在跳转时替换当前页面历史, 默认值: `false`"
+  "van-badge/max": {
+    "type": "number | string",
+    "description": "最大值，超过最大值会显示 `{max}+`，仅当 content 为数字时有效, 默认值: -"
   },
   "van-calendar/type": {
     "type": "string",
@@ -443,21 +371,93 @@
     "type": "string",
     "description": "选择超过最多可选天数时的提示文案, 默认值: `选择天数不能超过 xx 天`"
   },
-  "van-badge/content": {
-    "type": "number | string",
-    "description": "徽标内容, 默认值: -"
-  },
-  "van-badge/color": {
+  "van-button/type": {
     "type": "string",
-    "description": "徽标背景颜色, 默认值: `#ee0a24`"
+    "description": "类型，可选值为 `primary` `info` `warning` `danger`, 默认值: `default`"
   },
-  "van-badge/dot": {
+  "van-button/size": {
+    "type": "string",
+    "description": "尺寸，可选值为 `large` `small` `mini`, 默认值: `normal`"
+  },
+  "van-button/text": {
+    "type": "string",
+    "description": "按钮文字, 默认值: -"
+  },
+  "van-button/color": {
+    "type": "string",
+    "description": "按钮颜色，支持传入 `linear-gradient` 渐变色, 默认值: -"
+  },
+  "van-button/icon": {
+    "type": "string",
+    "description": "左侧[图标名称](#/zh-CN/icon)或图片链接, 默认值: -"
+  },
+  "van-button/icon-prefix": {
+    "type": "string",
+    "description": "图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props), 默认值: `van-icon`"
+  },
+  "van-button/icon-position": {
+    "type": "string",
+    "description": "图标展示位置，可选值为 `right`, 默认值: `left`"
+  },
+  "van-button/tag": {
+    "type": "string",
+    "description": "按钮根节点的 HTML 标签, 默认值: `button`"
+  },
+  "van-button/native-type": {
+    "type": "string",
+    "description": "原生 button 标签的 type 属性, 默认值: -"
+  },
+  "van-button/block": {
     "type": "boolean",
-    "description": "是否展示为小红点, 默认值: `false`"
+    "description": "是否为块级元素, 默认值: `false`"
   },
-  "van-badge/max": {
-    "type": "number | string",
-    "description": "最大值，超过最大值会显示 `{max}+`，仅当 content 为数字时有效, 默认值: -"
+  "van-button/plain": {
+    "type": "boolean",
+    "description": "是否为朴素按钮, 默认值: `false`"
+  },
+  "van-button/square": {
+    "type": "boolean",
+    "description": "是否为方形按钮, 默认值: `false`"
+  },
+  "van-button/round": {
+    "type": "boolean",
+    "description": "是否为圆形按钮, 默认值: `false`"
+  },
+  "van-button/disabled": {
+    "type": "boolean",
+    "description": "是否禁用按钮, 默认值: `false`"
+  },
+  "van-button/hairline": {
+    "type": "boolean",
+    "description": "是否使用 0.5px 边框, 默认值: `false`"
+  },
+  "van-button/loading": {
+    "type": "boolean",
+    "description": "是否显示为加载状态, 默认值: `false`"
+  },
+  "van-button/loading-text": {
+    "type": "string",
+    "description": "加载状态提示文字, 默认值: -"
+  },
+  "van-button/loading-type": {
+    "type": "string",
+    "description": "[加载图标类型](#/zh-CN/loading)，可选值为 `spinner`, 默认值: `circular`"
+  },
+  "van-button/loading-size": {
+    "type": "string",
+    "description": "加载图标大小, 默认值: `20px`"
+  },
+  "van-button/url": {
+    "type": "string",
+    "description": "点击后跳转的链接地址, 默认值: -"
+  },
+  "van-button/to": {
+    "type": "string | object",
+    "description": "点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to), 默认值: -"
+  },
+  "van-button/replace": {
+    "type": "boolean",
+    "description": "是否在跳转时替换当前页面历史, 默认值: `false`"
   },
   "van-card/thumb": {
     "type": "string",
@@ -1163,6 +1163,18 @@
     "type": "string",
     "description": "内容位置，可选值为`left` `right`, 默认值: `center`"
   },
+  "van-empty/image": {
+    "type": "string",
+    "description": "图片类型，可选值为 `error` `network` `search`，支持传入图片 URL, 默认值: `default`"
+  },
+  "van-empty/image-size": {
+    "type": "number | string",
+    "description": "图片大小，默认单位为 `px`, 默认值: -"
+  },
+  "van-empty/description": {
+    "type": "string",
+    "description": "图片下方的描述文字, 默认值: -"
+  },
   "van-dropdown-menu/active-color": {
     "type": "string",
     "description": "菜单标题和选项的选中态颜色, 默认值: `#ee0a24`"
@@ -1218,18 +1230,6 @@
   "van-dropdown-item/get-container": {
     "type": "string | () => Element",
     "description": "指定挂载的节点，[用法示例](#/zh-CN/popup#zhi-ding-gua-zai-wei-zhi), 默认值: -"
-  },
-  "van-empty/image": {
-    "type": "string",
-    "description": "图片类型，可选值为 `error` `network` `search`，支持传入图片 URL, 默认值: `default`"
-  },
-  "van-empty/image-size": {
-    "type": "number | string",
-    "description": "图片大小，默认单位为 `px`, 默认值: -"
-  },
-  "van-empty/description": {
-    "type": "string",
-    "description": "图片下方的描述文字, 默认值: -"
   },
   "van-field/v-model (value)": {
     "type": "number | string",
@@ -1963,6 +1963,22 @@
     "type": "boolean",
     "description": "是否锁定背景滚动，锁定时蒙层里的内容也将无法滚动, 默认值: `true`"
   },
+  "van-panel/title": {
+    "type": "string",
+    "description": "标题, 默认值: -"
+  },
+  "van-panel/desc": {
+    "type": "string",
+    "description": "描述, 默认值: -"
+  },
+  "van-panel/status": {
+    "type": "string",
+    "description": "状态, 默认值: -"
+  },
+  "van-panel/icon": {
+    "type": "string",
+    "description": "标题左侧[图标名称](#/zh-CN/icon)或图片链接, 默认值: -"
+  },
   "van-pagination/v-model": {
     "type": "number",
     "description": "当前页码, 默认值: -"
@@ -1998,22 +2014,6 @@
   "van-pagination/force-ellipses": {
     "type": "boolean",
     "description": "是否显示省略号, 默认值: `false`"
-  },
-  "van-panel/title": {
-    "type": "string",
-    "description": "标题, 默认值: -"
-  },
-  "van-panel/desc": {
-    "type": "string",
-    "description": "描述, 默认值: -"
-  },
-  "van-panel/status": {
-    "type": "string",
-    "description": "状态, 默认值: -"
-  },
-  "van-panel/icon": {
-    "type": "string",
-    "description": "标题左侧[图标名称](#/zh-CN/icon)或图片链接, 默认值: -"
   },
   "van-password-input/value": {
     "type": "string",
@@ -2139,6 +2139,42 @@
     "type": "string | () => Element",
     "description": "指定挂载的节点，[用法示例](#/zh-CN/popup#zhi-ding-gua-zai-wei-zhi), 默认值: `body`"
   },
+  "van-progress/percentage": {
+    "type": "number | string",
+    "description": "进度百分比, 默认值: `0`"
+  },
+  "van-progress/stroke-width": {
+    "type": "number | string",
+    "description": "进度条粗细，默认单位为`px`, 默认值: `4px`"
+  },
+  "van-progress/color": {
+    "type": "string",
+    "description": "进度条颜色, 默认值: `#1989fa`"
+  },
+  "van-progress/track-color": {
+    "type": "string",
+    "description": "轨道颜色, 默认值: `#e5e5e5`"
+  },
+  "van-progress/pivot-text": {
+    "type": "string",
+    "description": "进度文字内容, 默认值: 百分比"
+  },
+  "van-progress/pivot-color": {
+    "type": "string",
+    "description": "进度文字背景色, 默认值: 同进度条颜色"
+  },
+  "van-progress/text-color": {
+    "type": "string",
+    "description": "进度文字颜色, 默认值: `white`"
+  },
+  "van-progress/inactive": {
+    "type": "boolean",
+    "description": "是否置灰, 默认值: `false`"
+  },
+  "van-progress/show-pivot": {
+    "type": "boolean",
+    "description": "是否显示进度文字, 默认值: `true`"
+  },
   "van-popup/v-model (value)": {
     "type": "boolean",
     "description": "是否显示弹出层, 默认值: `false`"
@@ -2210,42 +2246,6 @@
   "van-popup/safe-area-inset-bottom": {
     "type": "boolean",
     "description": "是否开启[底部安全区适配](#/zh-CN/advanced-usage#di-bu-an-quan-qu-gua-pei), 默认值: `false`"
-  },
-  "van-progress/percentage": {
-    "type": "number | string",
-    "description": "进度百分比, 默认值: `0`"
-  },
-  "van-progress/stroke-width": {
-    "type": "number | string",
-    "description": "进度条粗细，默认单位为`px`, 默认值: `4px`"
-  },
-  "van-progress/color": {
-    "type": "string",
-    "description": "进度条颜色, 默认值: `#1989fa`"
-  },
-  "van-progress/track-color": {
-    "type": "string",
-    "description": "轨道颜色, 默认值: `#e5e5e5`"
-  },
-  "van-progress/pivot-text": {
-    "type": "string",
-    "description": "进度文字内容, 默认值: 百分比"
-  },
-  "van-progress/pivot-color": {
-    "type": "string",
-    "description": "进度文字背景色, 默认值: 同进度条颜色"
-  },
-  "van-progress/text-color": {
-    "type": "string",
-    "description": "进度文字颜色, 默认值: `white`"
-  },
-  "van-progress/inactive": {
-    "type": "boolean",
-    "description": "是否置灰, 默认值: `false`"
-  },
-  "van-progress/show-pivot": {
-    "type": "boolean",
-    "description": "是否显示进度文字, 默认值: `true`"
   },
   "van-pull-refresh/v-model": {
     "type": "boolean",
@@ -2835,18 +2835,6 @@
     "type": "boolean",
     "description": "是否允许输入的值为空, 默认值: `false`"
   },
-  "van-sticky/offset-top": {
-    "type": "number | string",
-    "description": "吸顶时与顶部的距离，支持 `px` `vw` `vh` `rem` 单位，默认 `px`, 默认值: `0`"
-  },
-  "van-sticky/z-index": {
-    "type": "number | string",
-    "description": "吸顶时的 z-index, 默认值: `99`"
-  },
-  "van-sticky/container": {
-    "type": "Element",
-    "description": "容器对应的 HTML 节点, 默认值: -"
-  },
   "van-steps/active": {
     "type": "number | string",
     "description": "当前步骤, 默认值: `0`"
@@ -2878,6 +2866,18 @@
   "van-steps/icon-prefix": {
     "type": "string",
     "description": "图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props), 默认值: `van-icon`"
+  },
+  "van-sticky/offset-top": {
+    "type": "number | string",
+    "description": "吸顶时与顶部的距离，支持 `px` `vw` `vh` `rem` 单位，默认 `px`, 默认值: `0`"
+  },
+  "van-sticky/z-index": {
+    "type": "number | string",
+    "description": "吸顶时的 z-index, 默认值: `99`"
+  },
+  "van-sticky/container": {
+    "type": "Element",
+    "description": "容器对应的 HTML 节点, 默认值: -"
   },
   "van-submit-bar/price": {
     "type": "number",

@@ -714,227 +714,52 @@
           ]
         },
         {
-          "name": "van-button",
+          "name": "van-badge",
           "slots": [
             {
               "name": "default",
-              "description": "按钮内容"
+              "description": "徽标包裹的子元素"
             },
             {
-              "name": "icon",
-              "description": "自定义图标"
-            },
-            {
-              "name": "loading",
-              "description": "自定义加载图标"
+              "name": "content",
+              "description": "自定义徽标内容"
             }
           ],
-          "events": [
-            {
-              "name": "click",
-              "description": "点击按钮，且按钮状态不为加载或禁用时触发"
-            },
-            {
-              "name": "touchstart",
-              "description": "开始触摸按钮时触发"
-            }
-          ],
+          "events": [],
           "attributes": [
             {
-              "name": "type",
-              "default": "`default`",
-              "description": "类型，可选值为 `primary` `info` `warning` `danger`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "`normal`",
-              "description": "尺寸，可选值为 `large` `small` `mini`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "text",
+              "name": "content",
               "default": "-",
-              "description": "按钮文字",
+              "description": "徽标内容",
               "value": {
-                "type": "string",
+                "type": "number | string",
                 "kind": "expression"
               }
             },
             {
               "name": "color",
+              "default": "`#ee0a24`",
+              "description": "徽标背景颜色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "dot",
+              "default": "`false`",
+              "description": "是否展示为小红点",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "max",
               "default": "-",
-              "description": "按钮颜色，支持传入 `linear-gradient` 渐变色",
+              "description": "最大值，超过最大值会显示 `{max}+`，仅当 content 为数字时有效",
               "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "左侧[图标名称](#/zh-CN/icon)或图片链接",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon-prefix",
-              "default": "`van-icon`",
-              "description": "图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props)",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon-position",
-              "default": "`left`",
-              "description": "图标展示位置，可选值为 `right`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tag",
-              "default": "`button`",
-              "description": "按钮根节点的 HTML 标签",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "native-type",
-              "default": "-",
-              "description": "原生 button 标签的 type 属性",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "block",
-              "default": "`false`",
-              "description": "是否为块级元素",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "plain",
-              "default": "`false`",
-              "description": "是否为朴素按钮",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "square",
-              "default": "`false`",
-              "description": "是否为方形按钮",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "round",
-              "default": "`false`",
-              "description": "是否为圆形按钮",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "`false`",
-              "description": "是否禁用按钮",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "hairline",
-              "default": "`false`",
-              "description": "是否使用 0.5px 边框",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "loading",
-              "default": "`false`",
-              "description": "是否显示为加载状态",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "loading-text",
-              "default": "-",
-              "description": "加载状态提示文字",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "loading-type",
-              "default": "`circular`",
-              "description": "[加载图标类型](#/zh-CN/loading)，可选值为 `spinner`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "loading-size",
-              "default": "`20px`",
-              "description": "加载图标大小",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "url",
-              "default": "-",
-              "description": "点击后跳转的链接地址",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "to",
-              "default": "-",
-              "description": "点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)",
-              "value": {
-                "type": "string | object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "replace",
-              "default": "`false`",
-              "description": "是否在跳转时替换当前页面历史",
-              "value": {
-                "type": "boolean",
+                "type": "number | string",
                 "kind": "expression"
               }
             }
@@ -1289,52 +1114,227 @@
           ]
         },
         {
-          "name": "van-badge",
+          "name": "van-button",
           "slots": [
             {
               "name": "default",
-              "description": "徽标包裹的子元素"
+              "description": "按钮内容"
             },
             {
-              "name": "content",
-              "description": "自定义徽标内容"
+              "name": "icon",
+              "description": "自定义图标"
+            },
+            {
+              "name": "loading",
+              "description": "自定义加载图标"
             }
           ],
-          "events": [],
-          "attributes": [
+          "events": [
             {
-              "name": "content",
-              "default": "-",
-              "description": "徽标内容",
-              "value": {
-                "type": "number | string",
-                "kind": "expression"
-              }
+              "name": "click",
+              "description": "点击按钮，且按钮状态不为加载或禁用时触发"
             },
             {
-              "name": "color",
-              "default": "`#ee0a24`",
-              "description": "徽标背景颜色",
+              "name": "touchstart",
+              "description": "开始触摸按钮时触发"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "type",
+              "default": "`default`",
+              "description": "类型，可选值为 `primary` `info` `warning` `danger`",
               "value": {
                 "type": "string",
                 "kind": "expression"
               }
             },
             {
-              "name": "dot",
+              "name": "size",
+              "default": "`normal`",
+              "description": "尺寸，可选值为 `large` `small` `mini`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "text",
+              "default": "-",
+              "description": "按钮文字",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "color",
+              "default": "-",
+              "description": "按钮颜色，支持传入 `linear-gradient` 渐变色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "左侧[图标名称](#/zh-CN/icon)或图片链接",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon-prefix",
+              "default": "`van-icon`",
+              "description": "图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props)",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon-position",
+              "default": "`left`",
+              "description": "图标展示位置，可选值为 `right`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tag",
+              "default": "`button`",
+              "description": "按钮根节点的 HTML 标签",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "native-type",
+              "default": "-",
+              "description": "原生 button 标签的 type 属性",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "block",
               "default": "`false`",
-              "description": "是否展示为小红点",
+              "description": "是否为块级元素",
               "value": {
                 "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "max",
-              "default": "-",
-              "description": "最大值，超过最大值会显示 `{max}+`，仅当 content 为数字时有效",
+              "name": "plain",
+              "default": "`false`",
+              "description": "是否为朴素按钮",
               "value": {
-                "type": "number | string",
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "square",
+              "default": "`false`",
+              "description": "是否为方形按钮",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "round",
+              "default": "`false`",
+              "description": "是否为圆形按钮",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabled",
+              "default": "`false`",
+              "description": "是否禁用按钮",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "hairline",
+              "default": "`false`",
+              "description": "是否使用 0.5px 边框",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "loading",
+              "default": "`false`",
+              "description": "是否显示为加载状态",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "loading-text",
+              "default": "-",
+              "description": "加载状态提示文字",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "loading-type",
+              "default": "`circular`",
+              "description": "[加载图标类型](#/zh-CN/loading)，可选值为 `spinner`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "loading-size",
+              "default": "`20px`",
+              "description": "加载图标大小",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "url",
+              "default": "-",
+              "description": "点击后跳转的链接地址",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "to",
+              "default": "-",
+              "description": "点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)",
+              "value": {
+                "type": "string | object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "replace",
+              "default": "`false`",
+              "description": "是否在跳转时替换当前页面历史",
+              "value": {
+                "type": "boolean",
                 "kind": "expression"
               }
             }
@@ -3398,6 +3398,53 @@
           ]
         },
         {
+          "name": "van-empty",
+          "slots": [
+            {
+              "name": "default",
+              "description": "自定义底部内容"
+            },
+            {
+              "name": "image",
+              "description": "自定义图标"
+            },
+            {
+              "name": "description",
+              "description": "自定义描述文字"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "image",
+              "default": "`default`",
+              "description": "图片类型，可选值为 `error` `network` `search`，支持传入图片 URL",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "image-size",
+              "default": "-",
+              "description": "图片大小，默认单位为 `px`",
+              "value": {
+                "type": "number | string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "description",
+              "default": "-",
+              "description": "图片下方的描述文字",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "van-dropdown-menu",
           "slots": [],
           "events": [],
@@ -3562,53 +3609,6 @@
               "description": "指定挂载的节点，[用法示例](#/zh-CN/popup#zhi-ding-gua-zai-wei-zhi)",
               "value": {
                 "type": "string | () => Element",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "van-empty",
-          "slots": [
-            {
-              "name": "default",
-              "description": "自定义底部内容"
-            },
-            {
-              "name": "image",
-              "description": "自定义图标"
-            },
-            {
-              "name": "description",
-              "description": "自定义描述文字"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "image",
-              "default": "`default`",
-              "description": "图片类型，可选值为 `error` `network` `search`，支持传入图片 URL",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "image-size",
-              "default": "-",
-              "description": "图片大小，默认单位为 `px`",
-              "value": {
-                "type": "number | string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "description",
-              "default": "-",
-              "description": "图片下方的描述文字",
-              "value": {
-                "type": "string",
                 "kind": "expression"
               }
             }
@@ -5686,6 +5686,62 @@
           ]
         },
         {
+          "name": "van-panel",
+          "slots": [
+            {
+              "name": "default",
+              "description": "自定义内容"
+            },
+            {
+              "name": "header",
+              "description": "自定义 header"
+            },
+            {
+              "name": "footer",
+              "description": "自定义 footer"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "title",
+              "default": "-",
+              "description": "标题",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "desc",
+              "default": "-",
+              "description": "描述",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "status",
+              "default": "-",
+              "description": "状态",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "标题左侧[图标名称](#/zh-CN/icon)或图片链接",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "van-pagination",
           "slots": [
             {
@@ -5786,62 +5842,6 @@
               "description": "是否显示省略号",
               "value": {
                 "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "van-panel",
-          "slots": [
-            {
-              "name": "default",
-              "description": "自定义内容"
-            },
-            {
-              "name": "header",
-              "description": "自定义 header"
-            },
-            {
-              "name": "footer",
-              "description": "自定义 footer"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "title",
-              "default": "-",
-              "description": "标题",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "desc",
-              "default": "-",
-              "description": "描述",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "status",
-              "default": "-",
-              "description": "状态",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "标题左侧[图标名称](#/zh-CN/icon)或图片链接",
-              "value": {
-                "type": "string",
                 "kind": "expression"
               }
             }
@@ -6224,6 +6224,94 @@
           ]
         },
         {
+          "name": "van-progress",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "percentage",
+              "default": "`0`",
+              "description": "进度百分比",
+              "value": {
+                "type": "number | string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "stroke-width",
+              "default": "`4px`",
+              "description": "进度条粗细，默认单位为`px`",
+              "value": {
+                "type": "number | string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "color",
+              "default": "`#1989fa`",
+              "description": "进度条颜色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "track-color",
+              "default": "`#e5e5e5`",
+              "description": "轨道颜色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "pivot-text",
+              "default": "百分比",
+              "description": "进度文字内容",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "pivot-color",
+              "default": "同进度条颜色",
+              "description": "进度文字背景色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "text-color",
+              "default": "`white`",
+              "description": "进度文字颜色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "inactive",
+              "default": "`false`",
+              "description": "是否置灰",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "show-pivot",
+              "default": "`true`",
+              "description": "是否显示进度文字",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "van-popup",
           "slots": [],
           "events": [
@@ -6414,94 +6502,6 @@
               "name": "safe-area-inset-bottom",
               "default": "`false`",
               "description": "是否开启[底部安全区适配](#/zh-CN/advanced-usage#di-bu-an-quan-qu-gua-pei)",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "van-progress",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "percentage",
-              "default": "`0`",
-              "description": "进度百分比",
-              "value": {
-                "type": "number | string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "stroke-width",
-              "default": "`4px`",
-              "description": "进度条粗细，默认单位为`px`",
-              "value": {
-                "type": "number | string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "color",
-              "default": "`#1989fa`",
-              "description": "进度条颜色",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "track-color",
-              "default": "`#e5e5e5`",
-              "description": "轨道颜色",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "pivot-text",
-              "default": "百分比",
-              "description": "进度文字内容",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "pivot-color",
-              "default": "同进度条颜色",
-              "description": "进度文字背景色",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "text-color",
-              "default": "`white`",
-              "description": "进度文字颜色",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "inactive",
-              "default": "`false`",
-              "description": "是否置灰",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "show-pivot",
-              "default": "`true`",
-              "description": "是否显示进度文字",
               "value": {
                 "type": "boolean",
                 "kind": "expression"
@@ -8183,49 +8183,6 @@
           ]
         },
         {
-          "name": "van-sticky",
-          "slots": [],
-          "events": [
-            {
-              "name": "change",
-              "description": "当吸顶状态改变时触发"
-            },
-            {
-              "name": "scroll",
-              "description": "滚动时触发"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "offset-top",
-              "default": "`0`",
-              "description": "吸顶时与顶部的距离，支持 `px` `vw` `vh` `rem` 单位，默认 `px`",
-              "value": {
-                "type": "number | string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "z-index",
-              "default": "`99`",
-              "description": "吸顶时的 z-index",
-              "value": {
-                "type": "number | string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "container",
-              "default": "-",
-              "description": "容器对应的 HTML 节点",
-              "value": {
-                "type": "Element",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "van-steps",
           "slots": [],
           "events": [
@@ -8327,6 +8284,49 @@
           ],
           "events": [],
           "attributes": []
+        },
+        {
+          "name": "van-sticky",
+          "slots": [],
+          "events": [
+            {
+              "name": "change",
+              "description": "当吸顶状态改变时触发"
+            },
+            {
+              "name": "scroll",
+              "description": "滚动时触发"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "offset-top",
+              "default": "`0`",
+              "description": "吸顶时与顶部的距离，支持 `px` `vw` `vh` `rem` 单位，默认 `px`",
+              "value": {
+                "type": "number | string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "z-index",
+              "default": "`99`",
+              "description": "吸顶时的 z-index",
+              "value": {
+                "type": "number | string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "container",
+              "default": "-",
+              "description": "容器对应的 HTML 节点",
+              "value": {
+                "type": "Element",
+                "kind": "expression"
+              }
+            }
+          ]
         },
         {
           "name": "van-submit-bar",

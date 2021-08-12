@@ -74,30 +74,12 @@
       "default-tag-text"
     ]
   },
-  "van-button": {
+  "van-badge": {
     "attributes": [
-      "type",
-      "size",
-      "text",
+      "content",
       "color",
-      "icon",
-      "icon-prefix",
-      "icon-position",
-      "tag",
-      "native-type",
-      "block",
-      "plain",
-      "square",
-      "round",
-      "disabled",
-      "hairline",
-      "loading",
-      "loading-text",
-      "loading-type",
-      "loading-size",
-      "url",
-      "to",
-      "replace"
+      "dot",
+      "max"
     ]
   },
   "van-calendar": {
@@ -146,12 +128,30 @@
       "range-prompt"
     ]
   },
-  "van-badge": {
+  "van-button": {
     "attributes": [
-      "content",
+      "type",
+      "size",
+      "text",
       "color",
-      "dot",
-      "max"
+      "icon",
+      "icon-prefix",
+      "icon-position",
+      "tag",
+      "native-type",
+      "block",
+      "plain",
+      "square",
+      "round",
+      "disabled",
+      "hairline",
+      "loading",
+      "loading-text",
+      "loading-type",
+      "loading-size",
+      "url",
+      "to",
+      "replace"
     ]
   },
   "van-card": {
@@ -418,6 +418,13 @@
       "content-position"
     ]
   },
+  "van-empty": {
+    "attributes": [
+      "image",
+      "image-size",
+      "description"
+    ]
+  },
   "van-dropdown-menu": {
     "attributes": [
       "active-color",
@@ -438,13 +445,6 @@
       "lazy-render",
       "title-class",
       "get-container"
-    ]
-  },
-  "van-empty": {
-    "attributes": [
-      "image",
-      "image-size",
-      "description"
     ]
   },
   "van-field": {
@@ -702,6 +702,14 @@
       "lock-scroll"
     ]
   },
+  "van-panel": {
+    "attributes": [
+      "title",
+      "desc",
+      "status",
+      "icon"
+    ]
+  },
   "van-pagination": {
     "attributes": [
       "v-model",
@@ -713,14 +721,6 @@
       "items-per-page",
       "show-page-size",
       "force-ellipses"
-    ]
-  },
-  "van-panel": {
-    "attributes": [
-      "title",
-      "desc",
-      "status",
-      "icon"
     ]
   },
   "van-password-input": {
@@ -766,6 +766,19 @@
       "get-container"
     ]
   },
+  "van-progress": {
+    "attributes": [
+      "percentage",
+      "stroke-width",
+      "color",
+      "track-color",
+      "pivot-text",
+      "pivot-color",
+      "text-color",
+      "inactive",
+      "show-pivot"
+    ]
+  },
   "van-popup": {
     "attributes": [
       "v-model (value)",
@@ -786,19 +799,6 @@
       "transition-appear",
       "get-container",
       "safe-area-inset-bottom"
-    ]
-  },
-  "van-progress": {
-    "attributes": [
-      "percentage",
-      "stroke-width",
-      "color",
-      "track-color",
-      "pivot-text",
-      "pivot-color",
-      "text-color",
-      "inactive",
-      "show-pivot"
     ]
   },
   "van-pull-refresh": {
@@ -996,13 +996,6 @@
       "allow-empty"
     ]
   },
-  "van-sticky": {
-    "attributes": [
-      "offset-top",
-      "z-index",
-      "container"
-    ]
-  },
   "van-steps": {
     "attributes": [
       "active",
@@ -1017,6 +1010,13 @@
   },
   "van-step": {
     "attributes": []
+  },
+  "van-sticky": {
+    "attributes": [
+      "offset-top",
+      "z-index",
+      "container"
+    ]
   },
   "van-submit-bar": {
     "attributes": [
